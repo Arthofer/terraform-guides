@@ -91,6 +91,11 @@ allowed_types = [
 
 ##### Rules #####
 
+policy "restrict-gce-machine-type.sentinel" {
+  source            = "https://github.com/Arthofer/terraform-guides/blob/master/governance/second-generation/gcp/restrict-gce-machine-type.sentinel"
+  enforcement_level = "hard-manditory"
+}
+
 # Call the validation function
 machines_validated = validate_attribute_in_list("google_compute_instance",
                      "machine_type", allowed_types)
