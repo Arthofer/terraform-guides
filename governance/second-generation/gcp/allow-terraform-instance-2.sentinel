@@ -84,7 +84,7 @@ validate_attribute_in_list = func(type, attribute, allowed_values) {
 
 # Allowed GCP Machine Types
 # We don't include n1-standard-1 to illustrate overriding failed policy
-restrict_types = [
+allow_types = [
   "n1-standard-1",
 ]
 
